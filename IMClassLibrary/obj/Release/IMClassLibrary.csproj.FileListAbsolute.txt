@@ -1,0 +1,5 @@
+C:\Code\VSC_CSharp\DataBaseHomework\IMClassLibrary\bin\Release\IMClassLibrary.dll
+C:\Code\VSC_CSharp\DataBaseHomework\IMClassLibrary\bin\Release\IMClassLibrary.pdb
+C:\Code\VSC_CSharp\DataBaseHomework\IMClassLibrary\obj\Release\IMClassLibrary.csproj.CoreCompileInputs.cache
+C:\Code\VSC_CSharp\DataBaseHomework\IMClassLibrary\obj\Release\IMClassLibrary.dll
+C:\Code\VSC_CSharp\DataBaseHomework\IMClassLibrary\obj\Release\IMClassLibrary.pdb
