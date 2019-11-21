@@ -1,0 +1,17 @@
+C:\Users\Ziqi Cheng\Documents\OO\Client\OOClient\OOClient\bin\Debug\OOClient.exe.config
+C:\Users\Ziqi Cheng\Documents\OO\Client\OOClient\OOClient\bin\Debug\OOClient.exe
+C:\Users\Ziqi Cheng\Documents\OO\Client\OOClient\OOClient\bin\Debug\OOClient.pdb
+C:\Users\Ziqi Cheng\Documents\OO\Client\OOClient\OOClient\obj\Debug\OOClient.csprojAssemblyReference.cache
+C:\Users\Ziqi Cheng\Documents\OO\Client\OOClient\OOClient\obj\Debug\Login.g.cs
+C:\Users\Ziqi Cheng\Documents\OO\Client\OOClient\OOClient\obj\Debug\App.g.cs
+C:\Users\Ziqi Cheng\Documents\OO\Client\OOClient\OOClient\obj\Debug\OOClient_MarkupCompile.cache
+C:\Users\Ziqi Cheng\Documents\OO\Client\OOClient\OOClient\obj\Debug\OOClient_MarkupCompile.lref
+C:\Users\Ziqi Cheng\Documents\OO\Client\OOClient\OOClient\obj\Debug\Login.baml
+C:\Users\Ziqi Cheng\Documents\OO\Client\OOClient\OOClient\obj\Debug\OOClient.g.resources
+C:\Users\Ziqi Cheng\Documents\OO\Client\OOClient\OOClient\obj\Debug\OOClient.Properties.Resources.resources
+C:\Users\Ziqi Cheng\Documents\OO\Client\OOClient\OOClient\obj\Debug\OOClient.csproj.GenerateResource.cache
+C:\Users\Ziqi Cheng\Documents\OO\Client\OOClient\OOClient\obj\Debug\OOClient.csproj.CoreCompileInputs.cache
+C:\Users\Ziqi Cheng\Documents\OO\Client\OOClient\OOClient\obj\Debug\OOClient.exe
+C:\Users\Ziqi Cheng\Documents\OO\Client\OOClient\OOClient\obj\Debug\OOClient.pdb
+C:\Users\Ziqi Cheng\Documents\OO\Client\OOClient\OOClient\obj\Debug\Regist.g.cs
+C:\Users\Ziqi Cheng\Documents\OO\Client\OOClient\OOClient\obj\Debug\Regist.baml

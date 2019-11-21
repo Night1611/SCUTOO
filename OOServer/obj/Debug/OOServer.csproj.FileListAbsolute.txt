@@ -1,0 +1,12 @@
+C:\Users\Ziqi Cheng\Documents\OO\Server\OOServer\OOServer\bin\Debug\OOServer.exe.config
+C:\Users\Ziqi Cheng\Documents\OO\Server\OOServer\OOServer\bin\Debug\OOServer.exe
+C:\Users\Ziqi Cheng\Documents\OO\Server\OOServer\OOServer\bin\Debug\OOServer.pdb
+C:\Users\Ziqi Cheng\Documents\OO\Server\OOServer\OOServer\obj\Debug\OOServer.csprojAssemblyReference.cache
+C:\Users\Ziqi Cheng\Documents\OO\Server\OOServer\OOServer\obj\Debug\OOServer.csproj.CoreCompileInputs.cache
+C:\Users\Ziqi Cheng\Documents\OO\Server\OOServer\OOServer\obj\Debug\OOServer.exe
+C:\Users\Ziqi Cheng\Documents\OO\Server\OOServer\OOServer\obj\Debug\OOServer.pdb
+C:\Users\Ziqi Cheng\Documents\OO\Server\OOServer\OOServer\bin\Debug\MySql.Data.dll
+C:\Users\Ziqi Cheng\Documents\OO\Server\OOServer\OOServer\bin\Debug\Google.Protobuf.dll
+C:\Users\Ziqi Cheng\Documents\OO\Server\OOServer\OOServer\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Ziqi Cheng\Documents\OO\Server\OOServer\OOServer\bin\Debug\Renci.SshNet.dll
+C:\Users\Ziqi Cheng\Documents\OO\Server\OOServer\OOServer\obj\Debug\OOServer.csproj.CopyComplete

@@ -1,0 +1,6 @@
+C:\Users\Ziqi Cheng\Documents\OO\IMClassLibrary\bin\Debug\IMClassLibrary.dll
+C:\Users\Ziqi Cheng\Documents\OO\IMClassLibrary\bin\Debug\IMClassLibrary.pdb
+C:\Users\Ziqi Cheng\Documents\OO\IMClassLibrary\obj\Debug\IMClassLibrary.csprojAssemblyReference.cache
+C:\Users\Ziqi Cheng\Documents\OO\IMClassLibrary\obj\Debug\IMClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Ziqi Cheng\Documents\OO\IMClassLibrary\obj\Debug\IMClassLibrary.dll
+C:\Users\Ziqi Cheng\Documents\OO\IMClassLibrary\obj\Debug\IMClassLibrary.pdb
