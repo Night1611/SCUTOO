@@ -7,7 +7,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OldIMClassLibrary
+namespace IMClassLibrary
 {
 	//数据包类
 	[Serializable]
@@ -30,6 +30,10 @@ namespace OldIMClassLibrary
 		public DateTime sendTime { get; set; } //消息的发送时间
 		public string Sender { get; set; }
 		public string Receiver { get; set; }
+		public string SenderOOID { get; set; }
+		public string SenderOOName { get; set; }
+		public string ReceiverOOID { get; set; }
+		public string ReceiverOOName { get; set; }
 		public int MessageType = 0; //数据包类Type为0
 
         public static DataPackage Parse(byte[] data)
@@ -121,12 +125,16 @@ namespace OldIMClassLibrary
 					this.sendTime = chatDataPackage.sendTime;
 					this.MessageType = chatDataPackage.MessageType;
 					this.SenderID = chatDataPackage.SenderID;
+					this.SenderOOID = chatDataPackage.SenderOOID;
+					this.ReceiverOOID = chatDataPackage.ReceiverOOID;
 				}
 			}
 		} //构造函数 字节数组转化为数据包
-		public ChatDataPackage(string sender, string receiver, string message) : base(sender, receiver) {
+		public ChatDataPackage(string sender, string receiver, string message, string SenderOOID, string ReceiverOOID) : base(sender, receiver) {
 			MessageType = 3;
 			this.Message = message;
+			this.SenderOOID = SenderOOID;
+			this.ReceiverOOID = ReceiverOOID;
 		} //构造函数 接受发送者,接收者字符串,发送的消息
 		public string Message { get; set; } //发送的消息
 		public string SenderID { get; set; } //发送者的ID
@@ -137,7 +145,7 @@ namespace OldIMClassLibrary
 	public class SingleChatDataPackage : ChatDataPackage {
 		public SingleChatDataPackage(byte[] Bytes) : base(Bytes) {
 		} //构造函数 字节数组转化为数据包
-		public SingleChatDataPackage(string sender, string receiver, string message) : base(sender,receiver,message) {
+		public SingleChatDataPackage(string sender, string receiver, string message, string SenderOOID, string ReceiverOOID) : base(sender,receiver,message,SenderOOID,ReceiverOOID) {
 			MessageType = 4;
 		} //构造函数 接受发送者,接收者字符串,发送的消息
 		public static string operator +(string str, SingleChatDataPackage data) {
@@ -150,7 +158,7 @@ namespace OldIMClassLibrary
 	public class MultiChatDataPackage : ChatDataPackage {
 		public MultiChatDataPackage (byte[] Bytes) : base(Bytes) {
 		} //构造函数 字节数组转化为数据包
-		public MultiChatDataPackage(string sender, string receiver, string message) : base(sender, receiver, message) {
+		public MultiChatDataPackage(string sender, string receiver, string message, string SenderOOID, string ReceiverOOID) : base(sender, receiver, message, SenderOOID, ReceiverOOID) {
 			MessageType = 5;
 		} //构造函数 接受发送者,接收者字符串,发送的消息
 		public static string operator +(string str, MultiChatDataPackage data) {
@@ -179,7 +187,7 @@ namespace OldIMClassLibrary
 	//文件数据包类
 	[Serializable]
 	public class FileDataPackage : ChatDataPackage {
-		public FileDataPackage(string sender, string receiver, string message, byte[] file,string ext) : base(sender, receiver, message) {
+		public FileDataPackage(string sender, string receiver, string message, byte[] file,string ext, string SenderOOID, string ReceiverOOID) : base(sender, receiver, message,SenderOOID,ReceiverOOID) {
 			this.file = file;
 			FileExtension = ext;
 			MessageType = 7;
@@ -198,10 +206,44 @@ namespace OldIMClassLibrary
 					this.SenderID = fileDataPackage.SenderID;
 					this.file = fileDataPackage.file;
 					this.FileExtension = fileDataPackage.FileExtension;
+					this.SenderOOID = fileDataPackage.SenderOOID;
+					this.ReceiverOOID = fileDataPackage.ReceiverOOID;
 				}
 			}
 		} //构造函数 字节数组转化为数据包
 		public byte[] file; //文件流
 		public string FileExtension { get; set; } //文件后缀
+	}
+
+	//添加好友数据包类
+	[Serializable]
+	public class AddFriendDataPackage : DataPackage {
+		public AddFriendDataPackage() { }
+		public AddFriendDataPackage(byte[] Bytes) {
+			using (MemoryStream ms = new MemoryStream(Bytes)) {
+				IFormatter formatter = new BinaryFormatter();
+				ms.Position = 0;
+				AddFriendDataPackage addFriendDataPackage = formatter.Deserialize(ms) as AddFriendDataPackage;
+				if (addFriendDataPackage != null) {
+					this.Message = addFriendDataPackage.Message;
+					this.Sender = addFriendDataPackage.Sender;
+					this.Receiver = addFriendDataPackage.Receiver;
+					this.sendTime = addFriendDataPackage.sendTime;
+					this.MessageType = addFriendDataPackage.MessageType;
+					this.SenderID = addFriendDataPackage.SenderID;
+					this.SenderOOID = addFriendDataPackage.SenderOOID;
+					this.ReceiverOOID = addFriendDataPackage.ReceiverOOID;
+				}
+			}
+		} //构造函数 字节数组转化为数据包
+		public AddFriendDataPackage(string sender, string receiver, string message, string SenderOOID, string FriendOOID) : base(sender, receiver) {
+			MessageType = 8;
+			this.Message = message;
+			this.SenderOOID = SenderOOID;
+			this.FriendOOID = FriendOOID;
+		} //构造函数 接受发送者,接收者字符串,发送的消息
+		public string Message { get; set; } //发送的消息
+		public string SenderID { get; set; } //发送者的ID
+		public string FriendOOID { get; set; }
 	}
 }

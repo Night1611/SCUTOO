@@ -15,6 +15,7 @@ C:\Users\Ziqi Cheng\Documents\OO\Client\OOClient\OOClient\obj\Debug\OOClient.exe
 C:\Users\Ziqi Cheng\Documents\OO\Client\OOClient\OOClient\obj\Debug\OOClient.pdb
 C:\Users\Ziqi Cheng\Documents\OO\Client\OOClient\OOClient\obj\Debug\Regist.g.cs
 C:\Users\Ziqi Cheng\Documents\OO\Client\OOClient\OOClient\obj\Debug\Regist.baml
+<<<<<<< HEAD
 C:\Users\Ziqi Cheng\Documents\OO\OOClient\bin\Debug\OOClient.exe.config
 C:\Users\Ziqi Cheng\Documents\OO\OOClient\bin\Debug\OOClient.exe
 C:\Users\Ziqi Cheng\Documents\OO\OOClient\bin\Debug\OOClient.pdb
@@ -32,3 +33,22 @@ C:\Users\Ziqi Cheng\Documents\OO\OOClient\obj\Debug\OOClient.csproj.GenerateReso
 C:\Users\Ziqi Cheng\Documents\OO\OOClient\obj\Debug\OOClient.csproj.CoreCompileInputs.cache
 C:\Users\Ziqi Cheng\Documents\OO\OOClient\obj\Debug\OOClient.exe
 C:\Users\Ziqi Cheng\Documents\OO\OOClient\obj\Debug\OOClient.pdb
+=======
+C:\Code\VSC_CSharp\SCUTOO\OOClient\bin\Debug\OOClient.exe.config
+C:\Code\VSC_CSharp\SCUTOO\OOClient\bin\Debug\OOClient.exe
+C:\Code\VSC_CSharp\SCUTOO\OOClient\bin\Debug\OOClient.pdb
+C:\Code\VSC_CSharp\SCUTOO\OOClient\obj\Debug\OOClient.csprojAssemblyReference.cache
+C:\Code\VSC_CSharp\SCUTOO\OOClient\obj\Debug\Login.g.cs
+C:\Code\VSC_CSharp\SCUTOO\OOClient\obj\Debug\Regist.g.cs
+C:\Code\VSC_CSharp\SCUTOO\OOClient\obj\Debug\App.g.cs
+C:\Code\VSC_CSharp\SCUTOO\OOClient\obj\Debug\OOClient_MarkupCompile.cache
+C:\Code\VSC_CSharp\SCUTOO\OOClient\obj\Debug\OOClient_MarkupCompile.lref
+C:\Code\VSC_CSharp\SCUTOO\OOClient\obj\Debug\Login.baml
+C:\Code\VSC_CSharp\SCUTOO\OOClient\obj\Debug\Regist.baml
+C:\Code\VSC_CSharp\SCUTOO\OOClient\obj\Debug\OOClient.g.resources
+C:\Code\VSC_CSharp\SCUTOO\OOClient\obj\Debug\OOClient.Properties.Resources.resources
+C:\Code\VSC_CSharp\SCUTOO\OOClient\obj\Debug\OOClient.csproj.GenerateResource.cache
+C:\Code\VSC_CSharp\SCUTOO\OOClient\obj\Debug\OOClient.csproj.CoreCompileInputs.cache
+C:\Code\VSC_CSharp\SCUTOO\OOClient\obj\Debug\OOClient.exe
+C:\Code\VSC_CSharp\SCUTOO\OOClient\obj\Debug\OOClient.pdb
+>>>>>>> 814b0f53a85c76e46a6458d4c59d294895480c33

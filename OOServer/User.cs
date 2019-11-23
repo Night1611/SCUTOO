@@ -2,7 +2,7 @@
 using System.Text;
 using System.Net.Sockets;
 using System.Threading;
-using OldIMClassLibrary;
+using IMClassLibrary;
 
 namespace OOServer
 {

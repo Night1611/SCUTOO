@@ -147,7 +147,7 @@ namespace Listener {
 			stateObject.tcpClient = tcpClient;
 			//stateObject.buffer = SendMsg;
 			stateObject.friendIPAndPort = IP + ":" + port; //所选好友IP和端口号
-			var chatData = new IMClassLibrary.SingleChatDataPackage("Server", "Server", message);
+			var chatData = new IMClassLibrary.SingleChatDataPackage("Server", "Server", message, "Server","Server");
 			stateObject.buffer = chatData.DataPackageToBytes(); //buffer为发送的数据包的字节数组
 			tcpClient.BeginConnect(IP, int.Parse(port), new AsyncCallback(SentCallBackF), stateObject);
 		}
@@ -419,7 +419,7 @@ namespace Listener {
 								stateObject.tcpClient = tcpClient;
 								//stateObject.buffer = SendMsg;
 								stateObject.friendIPAndPort = send.IP; //所选好友IP和端口号
-								var chatData = new IMClassLibrary.MultiChatDataPackage(nowEnterPort.ToString(), userMessage.Receiver, userMessage.Message);
+								var chatData = new IMClassLibrary.MultiChatDataPackage(nowEnterPort.ToString(), userMessage.Receiver, userMessage.Message,"Server","Server");
 								chatData.SenderID = userMessage.Sender;
 								chatData.MessageType = 5;
 								stateObject.buffer = chatData.DataPackageToBytes(); //buffer为发送的数据包的字节数组
