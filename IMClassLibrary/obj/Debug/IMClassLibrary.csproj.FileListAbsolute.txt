@@ -4,3 +4,9 @@ C:\Users\Ziqi Cheng\Documents\OO\IMClassLibrary\obj\Debug\IMClassLibrary.csprojA
 C:\Users\Ziqi Cheng\Documents\OO\IMClassLibrary\obj\Debug\IMClassLibrary.csproj.CoreCompileInputs.cache
 C:\Users\Ziqi Cheng\Documents\OO\IMClassLibrary\obj\Debug\IMClassLibrary.dll
 C:\Users\Ziqi Cheng\Documents\OO\IMClassLibrary\obj\Debug\IMClassLibrary.pdb
+C:\Code\VSC_CSharp\SCUTOO\IMClassLibrary\bin\Debug\IMClassLibrary.dll
+C:\Code\VSC_CSharp\SCUTOO\IMClassLibrary\bin\Debug\IMClassLibrary.pdb
+C:\Code\VSC_CSharp\SCUTOO\IMClassLibrary\obj\Debug\IMClassLibrary.csprojAssemblyReference.cache
+C:\Code\VSC_CSharp\SCUTOO\IMClassLibrary\obj\Debug\IMClassLibrary.csproj.CoreCompileInputs.cache
+C:\Code\VSC_CSharp\SCUTOO\IMClassLibrary\obj\Debug\IMClassLibrary.dll
+C:\Code\VSC_CSharp\SCUTOO\IMClassLibrary\obj\Debug\IMClassLibrary.pdb
