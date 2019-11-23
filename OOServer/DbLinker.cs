@@ -24,6 +24,42 @@ namespace OOServer {
              }
         }
 
+        public static bool HasUser(string UName)
+        {
+            MySqlCommand sql = new MySqlCommand(@"SELECT * FROM Users WHERE UName = " + UName + @";");
+            MySqlDataReader reader = sql.ExecuteReader();
+            return reader.Read();
+        }
+
+        public static int GetUID(string UName)
+        {
+            try
+            {
+                MySqlCommand sql = new MySqlCommand(@"SELECT * FROM Users WHERE UName = " + UName + @";");
+                MySqlDataReader reader = sql.ExecuteReader();
+                if (reader.Read()) return int.Parse(reader[0].ToString());
+                return 0;
+            }catch(Exception ex)
+            {
+                return 0;
+            }
+        }
+
+        public static string GetUPwd(string UName)
+        {
+            try
+            {
+                MySqlCommand sql = new MySqlCommand(@"SELECT * FROM Users WHERE UName = " + UName + @";");
+                MySqlDataReader reader = sql.ExecuteReader();
+                if (reader.Read()) return reader[1].ToString();
+                return null;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
         public static int AddUser(string UName, string UPwd, int UType)
         {
             MySqlCommand sql = new MySqlCommand(@"INSERT INTO Users(UName, UPwd, UType) VALUES(" + UName + ", " + UPwd + ", " + UType + ");");
@@ -31,12 +67,12 @@ namespace OOServer {
             return (int)sql.LastInsertedId;
         }
 
-        public static bool DeleteUser(int UID)
+        public static bool DeleteUser(int UName)
         {
-            MySqlCommand sql = new MySqlCommand(@"SELECT * FROM Users WHERE UID = " + UID + @";");
+            MySqlCommand sql = new MySqlCommand(@"SELECT * FROM Users WHERE UName = " + UName + @";");
             if (sql.ExecuteReader().HasRows)
             {
-                sql = new MySqlCommand(@"DELETE FROM Users WHERE UID = " + UID + @";");
+                sql = new MySqlCommand(@"DELETE FROM Users WHERE UName = " + UName + @";");
                 sql.ExecuteNonQuery();
                 return true;
             }

@@ -7,7 +7,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IMClassLibrary
+namespace OldIMClassLibrary
 {
 	//数据包类
 	[Serializable]
@@ -31,7 +31,29 @@ namespace IMClassLibrary
 		public string Sender { get; set; }
 		public string Receiver { get; set; }
 		public int MessageType = 0; //数据包类Type为0
-	}
+
+        public static DataPackage Parse(byte[] data)
+        {
+            IFormatter formatter = new BinaryFormatter();
+            DataPackage dataPackage = formatter.Deserialize(new MemoryStream(data)) as DataPackage;
+            if (dataPackage == null || dataPackage.MessageType == 0) return null;
+            switch (dataPackage.MessageType)
+            {
+                case 1:
+                    return new LoginDataPackage(data);
+                case 2:
+                    return new LogoutDataPackage(data);
+                case 3:
+                    return null;
+                case 4:
+                    return null;
+                case 5:
+                    return new SingleChatDataPackage(data);
+                default:
+                    return null;
+            }
+        }
+    }
 
 	//登入数据包类
 	[Serializable]
@@ -182,5 +204,4 @@ namespace IMClassLibrary
 		public byte[] file; //文件流
 		public string FileExtension { get; set; } //文件后缀
 	}
-
 }

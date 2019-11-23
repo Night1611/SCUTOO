@@ -2,6 +2,7 @@
 using System.Text;
 using System.Net.Sockets;
 using System.Threading;
+using OldIMClassLibrary;
 
 namespace OOServer
 {
@@ -46,6 +47,17 @@ namespace OOServer
                  如果是注册数据包，那么则调用DbLinker添加进数据库并取得返回值（是否成功）
                  如果失败直接退出
                  */
+                LoginDataPackage loginData = DataPackage.Parse(buffer) as LoginDataPackage;
+                if(loginData == null) throw new Exception("非法数据包");
+                if (DbLinker.HasUser(loginData.UserID)) //有则登录
+                {
+                    if (loginData.Password != DbLinker.GetUPwd(loginData.UserID))
+                        throw new Exception("密码错误");
+                }
+                else //没有则添加好友
+                {
+                    DbLinker.AddUser(loginData.UserID, loginData.Password, 0);
+                }
                 while (true)
                 {
                     buffer = new byte[BUFFER_SIZE];
@@ -57,6 +69,7 @@ namespace OOServer
             }catch(Exception ex)
             {
                 Program.ShowMsg("Error: " + ex.Message);
+                Send("Error: " + ex.Message);
                 Program.onlineUsers.Remove(this);
             }
         }
@@ -72,6 +85,21 @@ namespace OOServer
             catch (Exception ex)
             {
                 Program.ShowMsg("Error: " + ex.Message);
+                Program.onlineUsers.Remove(this);
+                return false;
+            }
+        }
+
+        public bool Send(DataPackage data)
+        {
+            try
+            {
+                byte[] buffer = data.DataPackageToBytes();
+                conversationSocket.Send(buffer);
+                return true;
+            }catch(Exception ex)
+            {
+                Program.ShowMsg(UID + " Error: " + ex);
                 Program.onlineUsers.Remove(this);
                 return false;
             }
